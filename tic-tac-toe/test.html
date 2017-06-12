@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>observer</title>
+    <link rel="stylesheet" type="text/css" href="vendor/mocha.css">
+</head>
+<body>
+
+
+
+<div id="mocha"></div>
+
+<script type="text/javascript" src="js/Game.js"></script>
+
+
+<!--test -->
+
+<script src="vendor/mocha.js"></script>
+<script src="vendor/chai.js"></script>
+<script>
+    mocha.ui('tdd');
+    var assert = chai.assert;
+</script>
+
+<script src="qa/tests-Game.js"></script>
+
+
+
+<script>mocha.run();</script>
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+
+  <div class="page">
+
+      <header class="heading">
+            <h1 >Jhong's Todo</h1>
+      </header>
+
+      <div class="container">
+
+          <div class="add-todo">
+               <input id="new-todo" type="text" placeholder="type the new todo" name="">
+          </div>
+
+          <ul  id="todo-list" class="todo-list">
+          </ul>
+
+          <footer id="footer-bar" class="row footer">
+
+          </footer>
+
+      </div>
+
+  </div>
+
+<script id="todo-list-template"  type="text/x-handlebars-template">
+{{#each todos}}
+  <li data-id="{{id}}">
+      <div class="row align-items-center justify-content-center" >
+          <input type="checkbox" class="checked-indicator toggle-completed"  {{#if completed}}checked{{/if}}>
+          <textarea class="todo-edit" >{{descript}}</textarea>
+          <p class="todo-content" data-order="1" >{{descript}}
+          </p>
+          <div>
+              <span class="icon icon-delete destroy">
+              </span>
+          </div>
+      </div>
+  </li>
+{{/each}}
+
+</script>
+
+<script id="footer-template" type="text/x-handlebars-template">
+   <div id="todo-count">
+    </li>
+            <strong>{{count}}</strong> <span>{{article}}</span> left
+   </div>
+
+  <ul class="filter-list row">
+    <li >
+      <a href="#/all" {{#eq filter 'all'}}class="active"{{/eq}}>All</a>
+    </li>
+    <li >
+      <a href="#/active" {{#eq filter 'active'}}class="active"{{/eq}}>Active</a>
+    </li>
+    <li >
+      <a href="#/completed" {{#eq filter 'completed'}}class="active"{{/eq}}>Completed</a>
+    </li>
+  </ul>
+
+  <span  id="clear-completed" class="btn-clear-completed {{#if disableClearCompleted}} disable{{/if}}">clear completed</span>
+
+
+</script>
+
+
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+</html>

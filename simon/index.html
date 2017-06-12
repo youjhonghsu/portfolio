@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIMON</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <body>
+
+  <div class="container">
+    <h1 class="title">SIMON </h1>
+
+    <div class="box">
+       <div id='r1' class="region sector-top-left unclickable">
+        <audio id="simon-sound1">
+          <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+          <source src="http://mihailo.centarzatalente.com/sounds/click.ogg"></source>
+          Audio not supported.
+        </audio>
+      </div>
+       <div id='r2' class="region sector-top-right unclickable">
+         <audio id="simon-sound2">
+          <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+          <source src="http://mihailo.centarzatalente.com/sounds/click.ogg"></source>
+          Audio not supported.
+        </audio>
+      </div>
+       <div id='r3' class="region sector-bottom-left unclickable">
+         <audio id="simon-sound3">
+          <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+          <source src="http://mihailo.centarzatalente.com/sounds/click.ogg"></source>
+          Audio not supported.
+        </audio>
+      </div>
+       <div id='r4' class="region sector-bottom-right unclickable">
+         <audio id="simon-sound4">
+          <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+          <source src="http://mihailo.centarzatalente.com/sounds/click.ogg"></source>
+          Audio not supported.
+        </audio>
+      </div>
+      <div class="panel">
+        <h1 class="logo">SIMON</h1>
+        <div class="sub-panel">
+          <div class="btn-box">
+             <div class="digital">
+                <h2 class="counter"></h2>
+             </div>
+             <h6>LEVEL</h6>
+          </div>
+
+          <div class="btn-box">
+            <div class="circle-btn start-btn"></div>
+            <h6>START</h6>
+          </div>
+          <div class="btn-box">
+            <div class="strict-led"></div>
+            <div class="circle-btn strict-btn"></div>
+            <h6>STRICT</h6>
+          </div>
+        </div>
+        <div id="power-switch" class="power">
+          <h5>OFF</h5>
+          <div class="slide-switch">
+             <div class="switch"></div>
+             <span></span>
+          </div>
+          <h5>ON</h5>
+        </div>
+
+      </div>
+    </div>
+    <section class="intro">
+        <h3 class="">遊戲說明:</h3>
+        <ul>
+          <li>
+            按鈕說明：
+            <ul>
+               <li>點選開關可以將開關撥向ON或OFF的位置，ON為啟動遊戲；OFF則為閉關遊戲</li>
+               <li>在開關ON啟動後，遊戲進入等待狀態，點選紅色START鈕，遊戲即立即開始</li>
+               <li>STRICT鈕開啟時，遊戲會進入<strong>嚴格模式</strong>，當失敗時，LEVEL會降為1並重頭開始；反之則為<strong>非嚴格模式</strong>，失敗時LEVEL不會受到影響</li>
+            </ul>
+          </li>
+          <li>操作說明：遊戲主要可以分成兩個階段
+            <ul>
+                <li>首先第一個階段為playing階段，使用者必須嘗試記住亮燈的順序，亮燈的個數與level數相同，燈亮完後即進入第二階段。</li>
+                <li>第二個階度為receving階段，使用者必須依照第一階段亮燈的順序點選燈號，當順序正確無誤時即可進入下一個level並回到第一個階段；反之若使用者輸入的燈亮的順序有誤，則會發出錯誤訊息，並依據當時的當時的模式調整level，然後回到第一個階段。
+                </li>
+            </ul>
+          </li>
+        </ul>
+
+    </section>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
+
+

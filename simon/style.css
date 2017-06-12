@@ -1,0 +1,273 @@
+body{
+  height:100vh;
+  background-color: #ddd;
+}
+
+*{
+  margin:0;
+}
+
+
+.container{
+  margin:0 auto;
+  min-width: 450px;
+
+}
+
+
+.intro{
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 960px;
+}
+.title{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.box{
+  height:400px;
+  width:400px;
+  margin: 0 auto;
+  border-radius:50%;
+  background-color: #fff;
+  display:flex;
+  flex-flow:row wrap;
+  position:relative;
+}
+.region{
+  width:200px;
+  height:200px;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+
+
+
+.sector-top-left{
+  -webkit-border-top-left-radius: 100%;
+  -moz-border-radius-topleft: 100%;
+  border-top-left-radius: 100%;
+  background-color: #00b300;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+
+}
+
+.sector-top-right{
+-webkit-border-top-right-radius: 100%;
+-moz-border-radius-topright: 100%;
+border-top-right-radius: 100%;
+  background-color: #b30000;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.sector-bottom-left{
+-webkit-border-bottom-left-radius: 100%;
+-moz-border-radius-bottomleft: 100%;
+border-bottom-left-radius: 100%;
+  background-color: #b2b300;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+}
+
+.sector-bottom-right{
+-webkit-border-bottom-right-radius: 100%;
+-moz-border-radius-bottomright: 100%;
+border-bottom-right-radius: 100%;
+  background-color: #0000b3;
+  border-left: 5px solid black;
+  border-top: 5px solid black;
+}
+
+.sector-top-left.light{
+  background-color: #4dff4d;
+}
+
+.sector-top-right.light{
+  background-color: #ff4d4d;
+}
+
+.sector-bottom-left.light{
+  background-color: #ffff4d;
+}
+
+.sector-bottom-right.light{
+  background-color: #4d4dff;
+}
+
+.panel{
+  width:240px;
+  height:240px;
+  background-color: #F5FEFF;
+  padding-top:40px;
+  border:10px solid rgba(0,0,0,.7);
+  border-radius:50%;
+  position:absolute;
+  top: 80px;
+  left:80px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-sizing: border-box;
+}
+
+.logo{
+  margin:0;
+  margin-bottom:10px;
+
+}
+
+.sub-panel{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items: flex-end;
+  box-sizing: border-box;
+  width:100%;
+  padding:0 10px;
+  margin-bottom:10px;
+}
+
+.digital{
+  border-radius:3px;
+  border:1px solid black;
+  text-align:center;
+  color:red;
+  background-color: #383A3B;
+}
+
+.counter{
+  width:60px;
+  height: 30px;
+}
+
+.counter.blink{
+  -webkit-animation: blink 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{color: #383A3B;}
+  50%{color: 383A3B;}
+  50.01%{color: red;} /* 注意这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+  100%{color: red;}
+}
+
+
+
+.btn-box{
+  margin-right:10px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.circle-btn{
+  display:inline-block;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border: 2px solid rgba(0,0,0,.8);
+  background-color: red;
+  box-shadow:  -1px 1px 2px ;
+
+  transition: all .5;
+}
+
+.circle-btn:active{
+  transform: translateX(1px);
+  box-shadow: inset 1px 1px 0px;
+}
+
+/* label*/
+
+
+.start-btn{
+  left:30px;
+
+}
+
+.strict-btn{
+  left:55px;
+  background-color: yellow;
+
+}
+
+.strict-led{
+  width: 6px;
+  height: 6px;
+  border: 3px solid black;
+  border-radius:50%;
+  background-color: #636061;
+  margin-bottom:5px;
+}
+.strict-led.on{
+  background-color: #FA1129;
+}
+
+
+
+.power{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.power > h5{
+  margin:0 10px;
+
+}
+
+.slide-switch{
+  width:50px;
+  height:25px;
+  display:flex;
+  flex-direction:row;
+  border: 1px solid rgba(0,0,0,.9);
+  border-radius:3px;
+  background-color: rgba(0,0,0,.7);
+}
+.slide-switch.on{
+  justify-content:flex-end;
+}
+.slide-switch > .switch{
+  width:25px;
+  height:25px;
+  border-radius:3px;
+  border: 1px solid #047FBD;
+  background-color: #1298DB;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Scaling for Mobile */
+@media screen and (max-width: 500px){
+
+  .box {
+    top: 40px;
+
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    left: 50%;
+    margin-left: -142px;
+  }
+}
+
+

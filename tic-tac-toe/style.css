@@ -1,0 +1,149 @@
+body{
+   height:100vh;
+   width: 100vw;
+   overflow: hidden;
+   background-color:#3FA816;
+}
+.container{
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.result{
+  position:absolute;
+  top:30px;
+}
+
+.board{
+  border: 2px solid #EDDD2B;
+  padding:10px;
+  background:black;
+  color:white;
+  margin-bottom: 50px;
+  position:relative;
+}
+
+
+
+.row{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background: white;
+  width:300px;
+  height:300px;
+}
+
+.cell{
+  text-align: center;
+  width: 99px;
+  line-height:99px;
+  background-color: black;
+  font-size: 50px;
+  vertical-align: middle;
+  cursor:pointer;
+}
+
+
+.start .cell{
+  height: 99px;
+}
+
+
+.btn{
+  padding:8px 10px;
+  border: 1px solid rgba(0,0,0,.7);
+  border-radius:3px;
+  font-size:30px;
+  cursor:pointer;
+  box-shadow: 1px 1px 0px rgba(0,0,0,.4);
+
+}
+
+.btn:active{
+
+  background-color: white;
+}
+
+
+
+.check-bar{
+   position:absolute;
+   width:380px;
+   height:10px;
+   background-color: #60F7E8;
+   opacity:.9;
+   background-position: 0 0;
+   left: -40px;
+   display:none;
+
+}
+
+.check-bar.hor-0{
+   display:block;
+   bottom: 255px;
+}
+
+.check-bar.hor-1{
+   display:block;
+   bottom: 155px;
+}
+
+.check-bar.hor-2{
+   display:block;
+   bottom: 55px;
+}
+
+
+.check-bar.ver-0{
+   display:block;
+   transform: rotate(90deg); /* Standard syntax */
+   left:-130px;
+   bottom:155px;
+
+}
+
+.check-bar.ver-1{
+   display:block;
+   transform: rotate(90deg); /* Standard syntax */
+   left:-30px;
+   bottom:155px;
+}
+
+.check-bar.ver-2{
+   display:block;
+   transform: rotate(90deg); /* Standard syntax */
+   left: 70px;
+   bottom:155px;
+}
+
+.check-bar.dia-0{
+   display:block;
+   width:500px;
+   transform: rotate(45deg); /* Standard syntax */
+   bottom:155px;
+   left: -90px;
+}
+
+.check-bar.dia-1{
+   display:block;
+   width:500px;
+   transform: rotate(-45deg); /* Standard syntax */
+   bottom:155px;
+   left: -90px;
+}
+
+
+
+
+
+
+
+
+
