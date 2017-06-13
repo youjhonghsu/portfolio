@@ -49,4 +49,12 @@
     缺點：
     	1. no data binding(not efficient)
         
+#### 6.	[ajax](https://youjhonghsu.github.io/portfolio/ajax/index.html) 
+	使用工具及library：
+    	1. jQuery
+	說明：
+	    利用ajax分別取得The New York Times和wikipedia API所提供的內容。
+    技巧：
+        1.ajax
+        2.json and jsonp
 
