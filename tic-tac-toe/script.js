@@ -5,15 +5,11 @@ $(function(){
             setTimeout(resolve, ms)
         })
     }
-
   // You can play the game !!!!
     var audioCtx = new AudioContext();
-
     var frequencies = [195.998,329.628];
-
     var ramp = 0.05;
     var vol = 0.5;
-
 
     // create Oscillators
     var oscillators = frequencies.map(function(frq){
@@ -44,10 +40,6 @@ $(function(){
       });
     };
 
-
-
-
-
     var App = {
         //init
         init:function(){
@@ -56,7 +48,6 @@ $(function(){
             this.game = new Game();
             this.bindEvent();
             this.render();
-
         },
         bindEvent(){
             $('#grid-board').on('click','.cell',this.clickCell.bind(this));
@@ -64,23 +55,15 @@ $(function(){
             $('#again').on('click',this.again.bind(this));
         },
         clickCell(e){
-
-
             if (this.gridBoard.hasClass('unclickable') || !this.game.result === result.NONE ||
                  this.game.board[$('.cell').index(e.target)] !== EMPTY ){
                 return;
             }
-
             playGoodTone(1)
-
             this.gridBoard.addClass('unclickable')
-
             this.game.move( $('.cell').index(e.target))
-
             this.render();
-
             delay(0).then(function(){
-
                 this.game.botMove();
                 return delay(700)
             }.bind(this))
@@ -89,10 +72,8 @@ $(function(){
                 this.render();
                 this.gridBoard.removeClass('unclickable')
             }.bind(this))
-
         },
         start(e){
-
             $('#grid-board').addClass('start')
         },
         again(){
@@ -142,8 +123,6 @@ $(function(){
 
     }
 
-
     App.init();
-
 
 })
